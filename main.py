@@ -16,7 +16,6 @@ def pull_msg():
     request = pubsub_v1.PullRequest(
         subscription = subscription,
         max_messages = 1
-        # return_immediately = True
     )
     response = client.pull(request=request,)
     return response
